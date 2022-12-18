@@ -1,0 +1,90 @@
+.container-menu {
+    overflow-y: scroll;
+    position: relative;
+    background-color: #fff;
+    padding: 48px 40px;
+
+    &.is-open {
+        display: block;
+    }
+
+    @media screen and (max-width:767px) {
+        display: none;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 100%;
+
+    }
+    @media screen and (min-width:768px) {
+        display: flex;
+        padding: 0;
+        margin-right: 0;
+        border: none;
+    }
+
+}
+.btn-menu {
+    @extend %centering;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--mob {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        right: 15px;
+
+    }
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+
+.icon-close-mob,
+.icon-menu {
+
+    fill: black;
+    transition: fill $animation;
+}
+.icon-close-mob:hover,
+.icon-menu:hover,
+.icon-close-mob:focus,
+.icon-menu:focus {
+    fill: $accent-color;
+}
+
+.social-networks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 64px;
+
+    &__item {
+        display: block;
+
+        &:not(:last-child) {
+            padding-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
+    }
+
+    &__link {
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        @include font (18px, 1.2, 00.02em);
+        color: $accent-color;
+
+    }
+    @media screen and (min-width:768px) {
+        display: none;
+        border: none;
+    }
+}

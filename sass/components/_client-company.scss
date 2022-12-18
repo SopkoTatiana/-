@@ -1,0 +1,34 @@
+.client-company {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.client-company__link {
+    display: block;
+    @extend %centering;
+    height: 92px;
+
+    padding: 16px 50px;
+    border: 1px solid $color-icon;
+    border-radius: 4px;
+    transition: border-color $animation;
+
+        &:hover,
+        &:focus {
+            border-color: $accent-color;
+        }
+}
+
+
+.client-company__icon {
+    fill: $color-icon;
+    transition: fill $animation;
+
+    .client-company__link:hover &,
+    .client-company__link:focus & {
+        fill: $accent-color;
+    }
+}
+
